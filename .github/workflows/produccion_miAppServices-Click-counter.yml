@@ -26,13 +26,13 @@ jobs:
 
     - name: Construyendo proyecto Build
       if: github.event_name == 'push'
-      run: npm run build cd build
+      run: npm run build
 
     - name: Subiendo build folder
       uses: actions/upload-artifact@v2
       with:
         name: build
-        path: .
+        path: /home/site/wwwroot/build
 
   deploy:
     runs-on: ubuntu-latest
