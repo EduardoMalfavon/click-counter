@@ -21,13 +21,14 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Install
+    - name: Instalando dependencias
       run: npm install
-    - name: Build proyect
+
+    - name: Construyendo proyecto Build
       if: github.event_name == 'push'
-      run: npm run build 
-        # npm run test --if-present
-    - name: Upload build folder
+      run: npm run build cd build
+
+    - name: Subiendo build folder
       uses: actions/upload-artifact@v2
       with:
         name: build
