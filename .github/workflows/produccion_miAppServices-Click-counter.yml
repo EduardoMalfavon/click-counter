@@ -46,6 +46,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: build
+        path: /home/site/wwwroot/build
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
