@@ -24,7 +24,7 @@ function App() {
   return (
     <div data-test="component-app">
       <h1 data-test="counter-display">
-        Esta es una prueba "The counter is currently&nbsp;"
+        Esta es una prueba de integracion "The counter is currently&nbsp;"
         <span data-test="count">{count}</span>
       </h1>
       {err !== "" && <span>{err}</span>}
